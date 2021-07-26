@@ -2,9 +2,6 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-const Handlebars = require("handlebars");
-const template = Handlebars.compile("Name: {{name}}");
-
 module.exports = {
     entry: __dirname + "/src/main.js",
     module: {

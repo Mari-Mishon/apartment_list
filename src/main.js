@@ -1,7 +1,17 @@
 import '/public/style/main.css';
 import noUiSlider from 'nouislider';
 import 'nouislider/dist/nouislider.css';
-// import template from '/.main.hbs';
+import apartmentList from './templates/apartment_list.hbs';
+import {createElement, render} from './render.js'
+
+// document.addEventListener("DOMContentLoaded", () => {
+	let template = apartmentList({
+		title: "Чебурашка"
+	});
+  let DOMElement = createElement(template)
+	render(DOMElement)
+// });
+
 
 var slider = document.getElementById('slider');
 // const upBtn = document.querySelector(`.up_btn`);
@@ -14,5 +24,6 @@ noUiSlider.create(slider, {
         'max': 100
     }
 });
+
 
 
