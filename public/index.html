@@ -1,0 +1,67 @@
+<html lang="ru">
+  <head>
+    <title>Cписок квартир</title>
+    <script type="text/javascript" src="Handlebars.js"></script>
+
+  </head>
+  <body>
+    <main>
+      <div>
+        <table class="table">
+          <caption>
+            <h1>Квартиры</h1>
+          </caption>
+          <colgroup>
+            <col width="60" valign="top" />
+            <col width="250" valign="top" style="font-weight: bold" />
+            <col width="100" valign="top" />
+            <col width="100" valign="top" />
+            <col width="100" valign="top" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Планировка</th>
+              <th>Квартира</th>
+              <th>S,м +</th>
+              <th>Этаж +</th>
+              <th>Цена</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <!-- Данные с json -->
+              <!-- {{author}} -->
+              <td>Картинка1</td>
+              <td style="font-weight: bold">3-комнатная</td>
+              <td>63.1</td>
+              <td>1 <span style="opacity: 0.5">из 17</span></td>
+              <td>6 630 500</td>
+            </tr>
+          </tbody>
+        </table>
+        <script id="Handlebars-Template" type="text/x-handlebars-template">
+        </script>
+
+        <button class="btn">Загрузить еще</button>
+      </div> 
+
+      <div class="filters">
+        <div class="btns">
+          <button class="rooms_btn">1к</button>
+          <button class="rooms_btn">2к</button>
+          <button class="rooms_btn">3к</button>
+          <button class="rooms_btn">4к</button>
+        </div>
+
+        <div id="slider"></div>
+
+        <p>Стоимость квартиры, Р</p>
+        <p>Площадь, м</p>
+
+        <button class="reset">Сбросить параметры</button>
+      </div>
+    </main>
+    <a href="#top" class="up_btn">Наверх</a>
+
+  </body>
+</html>
