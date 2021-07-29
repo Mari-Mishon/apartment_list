@@ -1,9 +1,16 @@
-export const createElement = (template) => {
-    const newElement = document.createElement(`div`);
-    newElement.innerHTML = template;
-    return newElement.firstElementChild;
-};
+import apartment from "./templates/apartment.hbs"
 
-export const render = (child) => {
-    document.body.querySelector("#app").prepend(child);
-};
+const renderFlat = (flat) => {
+    let tr = document.createElement('tr');
+    tr.innerHTML = apartment(flat);
+    tr.className = "flat-list"; 
+    document.querySelector('.table-body').append(tr)
+}
+
+const FLAT_COUNT = 20;
+const INIT_COUNT = 2;
+export const renderFlats = (flats) => {
+    flats.slice(0, INIT_COUNT).forEach(flat => {
+        renderFlat(flat);
+    });
+}

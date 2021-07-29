@@ -31,6 +31,11 @@ module.exports = {
             {
                 test: /\.hbs/,
                 loader: 'handlebars-loader',
+                options: {
+                    helperDirs: [
+                        path.join(__dirname, "/src/helpers/"),
+                    ]
+                },
                 exclude: /(node_modules|bower_components)/
             },
 

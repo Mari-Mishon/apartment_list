@@ -78,7 +78,7 @@ td {
   border-radius: 10px;
 }
 
-.btn {
+.loadMoreBtn {
   border: 1px solid rgba(11, 23, 57, 0.2);
   border-radius: 25px;
   padding: 8px 24px;
@@ -118,6 +118,7 @@ td {
   top: 0px;
   background: #ffffff;
   border-radius: 100px;
+  border: none;
 }
 
 .btns {
@@ -125,6 +126,59 @@ td {
   margin-left: 40px;
 }
 
-#slider {
-  color: black;
+.rooms_btn:active {
+  background-color: #3EB57C;
+  color:white;
+  box-shadow: 0px 6px 20px #95D0A1;
+  ;
+}
+
+.reset{
+margin-top: 65px;
+margin-left: 56px;
+border: none;
+cursor: pointer;
+    display: inline-block;
+    background-color: inherit;
+
+}
+
+.filter_title{
+  font-size: 14px;
+  margin-left: 40px;
+  margin-top: 38px;
+}
+
+.rub {
+  font-family: arial;
+  vertical-align: middle;
+  border-bottom: 1px solid;
+  line-height: 5px;
+  display: inline-block;
+  width: 0.4em;
+}
+
+.noUi-connect{
+  background-color: #3EB57C;
+
+}
+.noUi-target{
+  background-color: #3EB57C;
+  border: none;
+  border-radius: 100px;
+  box-shadow: none;
+  height: 2px;
+}
+
+.noUi-handle:after,
+.noUi-handle:before {
+  display: none;
+}
+
+.noUi-handle {
+  box-shadow: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+  background-color: #3EB57C;
 }
