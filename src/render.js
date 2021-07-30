@@ -1,16 +1,27 @@
 import apartment from "./templates/apartment.hbs"
 
-const renderFlat = (flat) => {
+const renderFlat = (flat, parentNode) => {
     let tr = document.createElement('tr');
     tr.innerHTML = apartment(flat);
     tr.className = "flat-list"; 
-    document.querySelector('.table-body').append(tr)
+    parentNode.append(tr)
 }
 
-const FLAT_COUNT = 20;
-const INIT_COUNT = 2;
 export const renderFlats = (flats) => {
-    flats.slice(0, INIT_COUNT).forEach(flat => {
-        renderFlat(flat);
+    let node = document.querySelector('.table-body')
+    flats.forEach(flat => {
+        renderFlat(flat, node);
     });
 }
+
+export const replaceFlats = (flats) => {
+  let node = document.querySelector('.table-body');
+  let cloneNode = node.cloneNode(false);
+  flats.forEach(flat => {
+    renderFlat(flat, cloneNode);
+});
+    node.parentNode.replaceChild(cloneNode, node)
+}
+
+
+
