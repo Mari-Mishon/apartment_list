@@ -2,38 +2,187 @@
   "data": [
     {
       "plan": "./public/style/img/plan.png",
-      "room": "3-комнатная №104",
+      "room": 3,
+      "number": 105,
       "area": 63.1,
       "floor": 1,
       "cost": 1630500
     },
     {
       "plan": "./public/style/img/plan.png",
-      "room": "3-комнатная №105",
+      "room": 3,
+      "number": 106,
       "area": 63.2,
       "floor": 2,
       "cost": 6650759
     },
     {
       "plan": "./public/style/img/plan.png",
-      "room": "3-комнатная №106",
+      "room": 2,
+      "number": 107,
       "area": 63.2,
       "floor": 3,
       "cost": 6650759
     },
     {
       "plan": "./public/style/img/plan.png",
-      "room": "3-комнатная №107",
+      "room": 3,
+      "number": 108,
       "area": 63.6,
       "floor": 4,
       "cost": 6671314
     },
     {
       "plan": "./public/style/img/plan.png",
-      "room": "3-комнатная №108",
+      "room": 3,
+      "number": 109,
       "area": 63.1,
       "floor": 5,
       "cost": 6679554
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 2,
+      "number": 110,
+      "area": 33.1,
+      "floor": 5,
+      "cost": 6679554
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 1,
+      "number": 111,
+      "area": 33.1,
+      "floor": 5,
+      "cost": 6679554
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 3,
+      "number": 112,
+      "area": 73.1,
+      "floor": 5,
+      "cost": 16679554
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 2,
+      "number": 113,
+      "area": 55.1,
+      "floor": 5,
+      "cost": 6679554
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 3,
+      "number": 114,
+      "area": 53.1,
+      "floor": 5,
+      "cost": 11679554
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 2,
+      "number": 115,
+      "area": 39.1,
+      "floor": 5,
+      "cost": 8679584
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 1,
+      "number": 116,
+      "area": 28.1,
+      "floor": 5,
+      "cost": 9629554
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 1,
+      "number": 117,
+      "area": 30.1,
+      "floor": 5,
+      "cost": 7679554
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 1,
+      "number": 118,
+      "area": 30.1,
+      "floor": 5,
+      "cost": 7679554
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 1,
+      "number": 119,
+      "area": 30.1,
+      "floor": 5,
+      "cost": 7679554
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 1,
+      "number": 120,
+      "area": 30.1,
+      "floor": 5,
+      "cost": 7679554
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 1,
+      "number": 121,
+      "area": 30.1,
+      "floor": 5,
+      "cost": 7679554
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 1,
+      "number": 122,
+      "area": 30.1,
+      "floor": 5,
+      "cost": 4679554
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 1,
+      "number": 123,
+      "area": 30.1,
+      "floor": 5,
+      "cost": 7679554
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 1,
+      "number": 124,
+      "area": 30.1,
+      "floor": 5,
+      "cost": 7679554
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 1,
+      "number": 125,
+      "area": 30.1,
+      "floor": 5,
+      "cost": 7679554
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 1,
+      "number": 126,
+      "area": 30.1,
+      "floor": 5,
+      "cost": 2679554
+    },
+    {
+      "plan": "./public/style/img/plan.png",
+      "room": 1,
+      "number": 127,
+      "area": 30.1,
+      "floor": 5,
+      "cost": 7679554
     }
   ]
 }

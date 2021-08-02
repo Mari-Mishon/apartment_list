@@ -20,41 +20,46 @@
             <tr>
               <th>Планировка</th>
               <th>Квартира</th>
-              <th>S,м +</th>
-              <th>Этаж +</th>
-              <th>Цена</th>
+              <th>
+                <button id="sort_area">S,м<sup><small>2</small></sup></button>
+              </th>
+              <th><button id="sort_area">Этаж</button></th>
+              <th><button id="sort_area">Цена</button></th>
             </tr>
           </thead>
           <tbody class="table-body"></tbody>
         </table>
 
-        <button class="more-button">Загрузить еще</button>
+        <button class="more_button">Загрузить еще</button>
       </div>
+
       <div class="filters">
         <div class="btns">
-          <button class="rooms_btn">1к</button>
-          <button class="rooms_btn">2к</button>
-          <button class="rooms_btn">3к</button>
-          <button class="rooms_btn" disabled>4к</button>
+          <button class="rooms_btn" id="oneRoom">1к</button>
+          <button class="rooms_btn" id="twoRoom">2к</button>
+          <button class="rooms_btn" id="threeRoom">3к</button>
+          <button class="rooms_btn" id="4" disabled>4к</button>
         </div>
 
         <div>
-          <p class="filter_title">
-            Стоимость квартиры, <span class="rub">Р</span>
-          </p>
-          <div class="slider_cost"></div>
+          <div class="filter_title">
+            Стоимость квартиры, <span class="rub">₽</span>
+          </div>
+          <div class="filters__slider" id="slider_cost"></div>
         </div>
 
         <div>
-          <p class="filter_title">
+          <div class="filter_title">
             Площадь, м<sup><small>2</small></sup>
-          </p>
-          <div class="slider_area"></div>
+          </div>
+          <div class="filters__slider" id="slider_area"></div>
         </div>
 
-        <button class="reset">Сбросить параметры x</button>
+        <button class="reset">
+          Сбросить параметры <span style="font-weight: bold">x</span>
+        </button>
       </div>
     </main>
-    <a href="#top" class="up_btn">Наверх</a>
+    <button class="up_btn"></button>
   </body>
 </html>

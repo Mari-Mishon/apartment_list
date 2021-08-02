@@ -1,32 +1,33 @@
 import noUiSlider from 'nouislider';
 import wNumb from 'wnumb'
 import 'nouislider/dist/nouislider.css';
-var rubPrefixFormat = wNumb({ prefix: '₽', decimals: 0 })
-var sliderCost = document.querySelector('.slider_cost');
-var sliderArea = document.querySelector('.slider_area');
+var fromPrefixFormat = wNumb({ thousand:' ', decimals: 0, prefix:'от '})
+var toPrefixFormat = wNumb({ thousand:' ', decimals: 0, prefix:'до '})
+var sliderCost = document.getElementById('slider_cost');
+var sliderArea = document.getElementById('slider_area');
 
-export const createSliderCost = () => {
+export const createSliderCost = (minStartCost, maxStartCost) => {
 return noUiSlider.create(sliderCost, {
-        start: [5500000, 18900000],
+        start: [minStartCost, maxStartCost],
         connect: true,
-        tooltips: [rubPrefixFormat, rubPrefixFormat],
-        step: 100000,
+        tooltips: [fromPrefixFormat, toPrefixFormat],
+        step: 10000000,
         range: {
-            'min': 1000000,
-            'max': 30000000
+            'min': 0,
+            'max': 40000000
         }
     });   
 }
 
-export const createSliderArea = () => {
+export const createSliderArea = (minStartArea, maxStartArea) => {
     return noUiSlider.create(sliderArea, {
-            start: [33, 123],
+            start: [minStartArea, maxStartArea],
             connect: true,
-            tooltips: [rubPrefixFormat, rubPrefixFormat],
-            step: 1,
+            tooltips: [fromPrefixFormat, toPrefixFormat],
+            step: 20,
             range: {
                 'min': 0,
-                'max': 300
+                'max': 100
             }
         });   
     }
