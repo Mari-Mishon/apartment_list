@@ -1,0 +1,41 @@
+.filters__slider {
+
+  &.noUi-target {
+    background: #d1d1d1;
+    border-radius: 100px;
+    border: none;
+    box-shadow: none;
+    height: 3px;
+
+  }
+
+  .noUi-connect {
+    background-color: $focus-color;
+  }
+  .noUi-handle::before,
+  .noUi-handle::after {
+    display: none;
+  }
+
+  .noUi-handle {
+    border-radius: 100%;
+    background: $focus-color;
+    cursor: default;
+    box-shadow: none;
+  }
+
+  &.noUi-horizontal .noUi-handle {
+    height: 14px;
+    width: 14px;
+    right: -13px;
+  }
+
+  .noUi-tooltip {
+    display: block;
+    position: absolute;
+    border: none;
+    border-radius: 3px;
+    background: none;
+    font-weight: 700;
+  }
+}

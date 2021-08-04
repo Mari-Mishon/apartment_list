@@ -1,7 +1,7 @@
 import noUiSlider from 'nouislider';
 import 'nouislider/dist/nouislider.css';
-var sliderCost = document.getElementById('slider_cost');
-var sliderArea = document.getElementById('slider_area');
+var sliderCost = document.getElementById('sliderCost');
+var sliderArea = document.getElementById('sliderArea');
 
 export const createSliderCost = (minStartCost, maxStartCost) => {
 return noUiSlider.create(sliderCost, {

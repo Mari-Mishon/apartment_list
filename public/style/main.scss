@@ -1,3 +1,10 @@
+@import "scss/apartments";
+@import "scss/buttons";
+@import "scss/slider";
+@import "scss/filters";
+@import "scss/variables";
+
+
 @font-face {
   font-family: "PT_Root-UI";
   font-style: normal;
@@ -14,298 +21,43 @@
   src: url("fonts/PT-Root-UI_Bold.woff") format("woff");
 }
 
-html,
-body {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: "PT_Root-UI", "Arial", sans-serif;
+  padding: 0;
+}
+
+body {
+  color: $text-color;
+  font-family: $font-stack;
   font-size: 14px;
   line-height: 20px;
 }
 
-  
-.page-main__container {
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+.main {
+  &__container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 1280px;
-    margin: 0 auto;
-    padding: 96px 0;
+    align-items: flex-start;
+    padding: 96px 80px;
   }
 
-  @media (min-width: 980px) and (max-width: 1439px) {
-    .page-main__container {
-        width: auto;
-        margin: 0;
-        padding: 48px 54px;
-      }
-    }
-  
-  @media (min-width: 400px) and (max-width: 959px) {
-    .page-main__container {
-        flex-direction: column;
-        width: 100%;
-        padding: 20px;
-      }
-    }
-
-    
-.filter {
-  display: flex;
-  flex-direction: row;
-  margin-top: 47px;
-  padding-bottom: 17px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-.filter__apartment {
-  display: flex;
-  flex-direction: row;
 }
 
-.filter__layout {
-  width: 80px;
-  margin-right: 20px;
-  padding: 0;
-}
-
-.filter__flat {
-  width: 281px;
-  margin-right: 20px;
-  padding: 0;
-}
-
-.filter__info {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-.filter__item {
-  display: flex;
-  flex-direction: row;
-  width: 120px;
-  margin-right: 20px;
-}
-
-.filter__name {
-  cursor: pointer;
-}
-.filter__name:hover {
-  color: #b4e2cc;
-}
-
-.filter__name:active {
-  color: red;
-}
-
-.filter__buttons {
-  display: flex;
-  flex-direction: column;
-  margin: 6px 5px 0 7px;
-}
-
-.filter__arrow {
-  background-color: #fff;
-  width: 5px;
-  height: 5px;
-  border-top: solid #e2e2e2;
-  border-right: solid #e2e2e2;
-  border-radius: 15%;
-  cursor: pointer;
-}
-.filter__arrow:hover {
-  border-top: solid #b4e2cc;
-  border-right: solid #b4e2cc;
-}
-
-.filter_arrow:active {
-  border-top: solid red;
-  border-right: solid red;
-}
-
-.filter_arrow--up {
-  transform: rotate(-45deg);
-}
-
-.filter_arrow--down {
-  transform: rotate(135deg);
-}
-
-@media (min-width: 950px) and (max-width: 1439px) {
-  .filter {
-    margin: 31px 0 13px 0;
-    padding: 0;
-    border: none;
-  }
-    .filter__apartment {
-      display: none;
-    }
-
-    .filter__item {
-      width: auto;
-      margin-right: 17px;
+@media (min-width: 960px) and (max-width: 1439px) {
+  .main {
+    &__container {
+      padding: 48px 54px;
     }
   }
-
-@media (min-width: 360px) and (max-width: 959px) {
-
-    .filter__apartment {
-      display: none;
-    }
-
-    .filter__item {
-      width: auto;
-      margin-right: 17px;
-    }
-  }
-
-.filters {
-  padding: 40px;
-  margin-left: 80px;
-  max-width: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(174, 228, 178, 0.3) 0%,
-    rgba(149, 208, 161, 0.3) 100%
-  );
-  border-radius: 10px;
-}
-
-.more_button {
-  border: 1px solid rgba(11, 23, 57, 0.2);
-  margin-top: 50px;
-  font-weight: 700;
-  border-radius: 25px;
-  background-color: white;
-  width: 156px;
-  height: 40px;
-  font-size: 16px;
-  font-family: "PT_Root-UI";
-}
-
-.more_button:hover {
-  background-color: #3eb57c;
-  color: white;
-  box-shadow: 0px 6px 20px #95d0a1;
-}
-.up_btn {
-  display: block;
-  position: fixed;
-
-  font-size: 16px;
-  opacity: 0.7;
-  background: #ddd;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  width: 40px;
-  height: 40px;
-  background: #95d0a1;
-  border-radius: 100px;
-  border: none;
-  right: 32px;
-  bottom: 32px;
-}
-
-.up_btn::before {
-  content: "\1F871";
-  color: #fff;
-}
-.up_btn:after {
-  font-size: 30px;
-  display: inline-block;
-  -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.rooms_btn {
-  margin-right: 16px;
-  margin-bottom: 24px;
-  width: 44px;
-  height: 44px;
-  background-color: #ffffff;
-  border-radius: 100px;
-  border: none;
-  font-size: 16px;
-  font-family: "PT_Root-UI";
-}
-
-.rooms_btn:focus {
-  background-color: #3eb57c;
-  color: white;
-  box-shadow: 0px 6px 20px #95d0a1;
-}
-
-.reset {
-  font-size: 14px;
-  font-family: "PT_Root-UI";
-  margin-top: 30px;
-  border: none;
-  cursor: pointer;
-  display: inline-block;
-  background-color: inherit;
-}
-
-.filter_title {
-  font-size: 14px;
-}
-
-.tooltips__filter {
-  margin-top: 8px;
-  font-size: 16px;
-}
-
-.filters__slider {
-  margin: 22 0;
-}
-.range__to {
-  margin-left: 20%;
-}
-.range__to,
-.range__from,
-.range__floor {
-  opacity: 0.5;
-}
-
-.bold {
-  font-weight: 700;
-}
-
-.noUi-target {
-  background: #d1d1d1;
-  border-radius: 100px;
-  border: none;
-  box-shadow: none;
-  height: 3px;
-  width: 100%;
-}
-
-.noUi-connect {
-  background-color: #3eb57c;
-}
-
-.noUi-handle::before,
-.noUi-handle::after {
-  display: none;
-}
-
-.noUi-handle {
-  border-radius: 100%;
-  background: #3eb57c;
-  cursor: default;
-  box-shadow: none;
-}
-
-.noUi-horizontal .noUi-handle {
-  height: 14px;
-  width: 14px;
-  right: -13px;
-}
-
-.noUi-tooltip {
-  display: block;
-  position: absolute;
-  border: none;
-  border-radius: 3px;
-  background: none;
-  font-weight: 700;
 }

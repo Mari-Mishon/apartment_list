@@ -1,0 +1,158 @@
+@import "./variables.scss";
+
+.apartments {
+  width: 801px;
+
+  &__header {
+    font-size: 54px;
+    line-height: 55px;
+    font-weight: bold;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 24px 20px 0;
+    margin-top: 4px;
+    border-bottom: $border;
+    border-radius: 8px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    order: 2;
+  }
+
+  &__name {
+    width: 281px;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 19px;
+  }
+
+  &__params {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__area {
+    width: 140px;
+  }
+
+  &__area-m,
+  &__floor,
+  &__price-p {
+    display: none;
+  }
+
+  &__floor-number,
+  &__floors,
+  &__price,
+  &__area {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__floors {
+    width: 140px;
+  }
+
+  &__floors-text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    opacity: 0.5;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1439px) {
+  .apartments {
+    width: 506px;
+
+    &__flat {
+      width: 52.6vw;
+      margin-bottom: 3px;
+    }
+
+    &__wrap {
+      padding: 16px 24px 10px 22px;
+      border: $border;
+    }
+
+    &__title {
+      flex-direction: column;
+      order: none;
+      width: 52.6vw;
+    }
+
+    &__name {
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__params {
+      margin-top: 16px;
+      padding: 0;
+    }
+
+    &__area-m,
+    &__floor,
+    &__price-p {
+      display: block;
+    }
+
+    &__area {
+      width: 50px;
+      font-size: 14px;
+      line-height: 20px;
+      margin-right: 14px;
+      font-weight: bold;
+    }
+
+    &__floor-number {
+      font-size: 14px;
+      line-height: 20px;
+      margin-right: 4px;
+      font-weight: bold;
+    }
+
+    &__floors-text {
+      display: flex;
+      flex-direction: row;
+      font-size: 14px;
+      opacity: 0.5;
+    }
+
+    &__floors {
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      margin-right: 21px;
+    }
+
+    &__floor {
+      margin-left: 5px;
+    }
+
+    &__price {
+      width: 180px;
+      display: flex;
+      flex-direction: row;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: bold;
+    }
+
+    &__price-p {
+      margin-left: 5px;
+    }
+
+    &__plan {
+      align-items: end;
+      order: 2;
+    }
+  }
+}

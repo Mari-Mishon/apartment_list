@@ -1,0 +1,157 @@
+@import "./variables.scss";
+
+.sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 47px;
+  padding-bottom: 17px;
+  border-bottom: $border;
+
+  &__apartment {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__plan {
+    width: 80px;
+    margin-right: 20px;
+    padding: 0;
+  }
+
+  &__flat {
+    width: 281px;
+    margin-right: 20px;
+    padding: 0;
+  }
+
+  &__params {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    width: 120px;
+    margin-right: 20px;
+  }
+
+  &__name {
+    cursor: pointer;
+
+    &:hover {
+      color: $focus-color;
+    }
+
+    &:active {
+      color: $focus-color;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 6px 5px 0 7px;
+  }
+
+  &__arrow {
+    background-color: white;
+    width: 5px;
+    height: 5px;
+    border-top: solid $arrow-color;
+    border-right: solid $arrow-color;
+    border-radius: 15%;
+    cursor: pointer;
+
+    &:hover {
+      border-top: solid $focus-color;
+      border-right: solid $focus-color;
+    }
+
+    &:active {
+      border-top: solid $focus-color;
+      border-right: solid $focus-color;
+    }
+
+    &--up {
+      transform: rotate(-45deg);
+    }
+
+    &--down {
+      transform: rotate(135deg);
+    }
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1439px) {
+  .sort {
+    margin: 31px 0 13px 0;
+    padding: 0;
+    border: none;
+
+    &__apartment {
+      display: none;
+    }
+
+    &__item {
+      width: auto;
+      margin-right: 17px;
+    }
+  }
+}
+
+.more__button {
+  border: 1px solid rgba(11, 23, 57, 0.2);
+  margin-top: 43px;
+  font-weight: 700;
+  border-radius: 25px;
+  background-color: white;
+  width: 156px;
+  height: 40px;
+  font-size: 16px;
+  font-family: $font-stack;
+}
+
+.more__button:hover {
+  background-color: $focus-color;
+  color: white;
+  box-shadow: 0px 6px 20px $shadow-color;
+}
+
+@media (min-width: 960px) and (max-width: 1439px) {
+  .more__button {
+    font-size: 15px;
+    line-height: 22px;
+    margin-top: 22px;
+  }
+}
+
+.up__btn {
+  display: block;
+  position: fixed;
+  font-size: 16px;
+  opacity: 0.7;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  width: 40px;
+  height: 40px;
+  background: $shadow-color;
+  border-radius: 100px;
+  border: none;
+  right: 32px;
+  bottom: 32px;
+}
+
+.up__btn::before {
+  content: "\1F871";
+  color: white;
+}
+.up__btn:after {
+  font-size: 30px;
+  display: inline-block;
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}

@@ -2,8 +2,8 @@ require('/public/style/main.scss');
 import { renderFlats, replaceFlats, renderSliderCostTitle, renderSliderAreaTitle } from './render.js'
 import { createSliderCost, createSliderArea } from './slider.js';
 import { createFilter } from './filters.js';
-let sliderCost = document.getElementById('slider_cost');
-let sliderArea = document.getElementById('slider_area');
+let sliderCost = document.getElementById('sliderCost');
+let sliderArea = document.getElementById('sliderArea');
 
 let globalFilter = {
   room: {
@@ -16,17 +16,16 @@ let globalFilter = {
   cost: []
 }
 
-const ADD_FLAT_COUNT = 5;
+const ADD_FLAT_COUNT = 20;
 const INIT_COUNT = 5;
 let currentFlatCount = 0;
-let moreFlatsButton = document.querySelector('.more_button');
-const roomButtons = document.querySelectorAll('.rooms_btn');
+let moreFlatsButton = document.querySelector('.more__button');
+const roomButtons = document.querySelectorAll('.rooms__btn');
 
 const prepareFlats = (flatsData, currentFlatCount) => {
   currentFlatCount = 0;
   let flatsToRender = flatsData.slice(currentFlatCount, INIT_COUNT)
   currentFlatCount += INIT_COUNT;
-  console.log(flatsData)
   return flatsToRender;
 
 }
@@ -157,7 +156,7 @@ fetch("https://my-json-server.typicode.com/Mari-Mishon/apartment_list/data").the
   });
 })
 
-const upButton = document.querySelector(".up_btn")
+const upButton = document.querySelector(".up__btn")
 const smoothJumpUp = () => {
   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
     window.scrollBy(0, -50);

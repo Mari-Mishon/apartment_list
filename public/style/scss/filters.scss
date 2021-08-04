@@ -1,0 +1,87 @@
+@import "./variables";
+
+.filters {
+  position: static;
+  background: $primary-background;
+  border-radius: 10px;
+  width: 399px;
+  height: 372px;
+  margin-left: 80px;
+}
+
+.filters__wrapper {
+  padding: 40px;
+}
+
+.rooms__btn {
+  margin-right: 16px;
+  margin-bottom: 24px;
+  width: 44px;
+  height: 44px;
+  background-color: white;
+  border-radius: 100px;
+  border: none;
+  font-size: 16px;
+  font-family: $font-stack;
+}
+
+.rooms__btn:focus {
+  background-color: $focus-color;
+  color: white;
+  box-shadow: 0px 6px 20px $shadow-color;
+}
+
+.filter__title {
+  font-size: 14px;
+}
+
+.tooltips__filter {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.filters__slider {
+  margin: 22px 0px;
+}
+
+.range__to {
+  margin-left: 20%;
+}
+
+.range__to,
+.range__from,
+.range__floor {
+  opacity: 0.5;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.reset {
+  display: inline-block;
+  font-size: 14px;
+  font-family: $font-stack;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+@media (min-width: 960px) and (max-width: 1439px) {
+  .filters {
+    width: 318px;
+    height: 318px;
+    margin-left: 28px;
+
+    
+    &__wrapper {
+      padding: 20px 19px 27px 19px;
+    }
+
+    &__price-header {
+      font-weight: 13px;
+      line-height: 18px;
+    }
+  }
+}
