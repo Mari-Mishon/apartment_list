@@ -1,11 +1,12 @@
-export const filterCost = (flats, range) => {
-    return flats.filter(flat => { 
-        return flat.cost>= range[0]  && flat.cost <= range[1]
-})
-}
+export const createFilter = (globalFilter) => {
 
-export const filterArea = (flats, range) => {
-    return flats.filter(flat => { 
-        return flat.cost>= range[0]  && flat.area <= range[1]
-})
+    let params = '';
+    Object.keys(globalFilter.room).forEach((key) => {
+        globalFilter.room[key] ? params += `room=${key}&` : params
+    })
+
+    params += `cost_gte=${globalFilter.cost[0]}&cost_lte=${globalFilter.cost[1]}&`
+    params += `area_gte=${globalFilter.area[0]}&area_lte=${globalFilter.area[1]}&`
+
+    return params;
 }

@@ -1,5 +1,23 @@
-  <td><img src="{{plan}}" width="80" height="80" /> </td>
-  <td style="font-weight: bold">{{room}}<span>-комнатная №</span>{{number}}</td>
-  <td>{{formatFloat area}}</td>
-  <td>{{floor}} <span style="opacity: 0.5">из 17</span></td>
-  <td>{{formatCost cost}}</td>
+  <div class="apartments__flat-description">
+    <h2 class="apartments__flat-name">{{room}}<span>-комнатная №</span>{{number}}</h2>
+    <div class="apartments__flat-info">
+      <p class="apartments__area">{{formatFloat area}}</p>
+      <p class="apartments__floors">
+        <span class="apartments__floor-number">{{floor}}</span>
+        <span class="apartments__floors-text">
+          из 17
+          <span class="apartments__floor">этаж</span></span>
+      </p>
+      <p class="apartments__price">{{formatCost cost}}
+        <span class="apartments__price-p">₽</span></p>
+    </div>
+  </div>
+  <div class="apartments__flat-pic">
+    <img
+      class="apartments__image"
+      src="{{plan}}"
+      width="80"
+      height="80"
+      alt="Планировка квартиры"
+    />
+  </div>

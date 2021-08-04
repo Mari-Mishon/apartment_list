@@ -1,55 +1,68 @@
 <html lang="ru">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Cписок квартир</title>
   </head>
   <body>
-    <main>
-      <div>
-        <table class="table">
-          <caption>
-            <h1>Квартиры</h1>
-          </caption>
-          <colgroup>
-            <col width="60" valign="top" />
-            <col width="250" valign="top" style="font-weight: bold" />
-            <col width="100" valign="top" />
-            <col width="100" valign="top" />
-            <col width="100" valign="top" />
-          </colgroup>
-          <thead>
-            <tr>
-              <th>Планировка</th>
-              <th>Квартира</th>
-              <th>
-                <button id="sort_area">S,м<sup><small>2</small></sup></button>
-              </th>
-              <th><button id="sort_area">Этаж</button></th>
-              <th><button id="sort_area">Цена</button></th>
-            </tr>
-          </thead>
-          <tbody class="table-body"></tbody>
-        </table>
+    <main class="page-main">
+      <div class="page-main__container">
+        <section class="apartments">
+          <h2 class="visually-hidden">Список квартир</h2>
+          <h1 class="apartments__header">Квартиры</h1>
+  
+          <div class="apartments__filter filter">
+  
+            <div class="filter__apartment">
+              <p class="filter__layout">Планировка</p>
+              <p class="filter__flat">Квартира</p>
+            </div>
+            <div class="filter__info">
+              <div class="filter__item">
+                <p class="filter__name">S, м²</p>
+                <div class="filter__buttons">
+                  <button class="filter__arrow filter__arrow--up"></button>
+                  <button class="filter__arrow filter__arrow--down"></button>
+                </div>
+              </div>
+              <div class="filter__item">
+                <p class="filter__name">Этаж</p>
+                <div class="filter__buttons">
+                  <button class="filter__arrow filter__arrow--up"></button>
+                  <button class="filter__arrow filter__arrow--down"></button>
+                </div>
+              </div>
+              <div class="filter__item">
+                <p class="filter__name">Цена, ₽</p>
+                <div class="filter__buttons">
+                  <button class="filter__arrow filter__arrow--up"></button>
+                  <button class="filter__arrow filter__arrow--down"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="table_body">Пожалуйста, подождите...</div>
 
         <button class="more_button">Загрузить еще</button>
       </div>
 
       <div class="filters">
         <div class="btns">
-          <button class="rooms_btn" id="oneRoom">1к</button>
-          <button class="rooms_btn" id="twoRoom">2к</button>
-          <button class="rooms_btn" id="threeRoom">3к</button>
-          <button class="rooms_btn" id="4" disabled>4к</button>
+          <button class="rooms_btn" id="1">1к</button>
+          <button class="rooms_btn" id="2">2к</button>
+          <button class="rooms_btn" id="3">3к</button>
+          <button class="rooms_btn" id="4">4к</button>
         </div>
 
-        <div>
-          <div class="filter_title">
+        <div class="under_slider">
+          <div class="filter_title filter_title_cost">
             Стоимость квартиры, <span class="rub">₽</span>
           </div>
           <div class="filters__slider" id="slider_cost"></div>
         </div>
 
-        <div>
-          <div class="filter_title">
+        <div class="under_slider">
+          <div class="filter_title filter_title_area">
             Площадь, м<sup><small>2</small></sup>
           </div>
           <div class="filters__slider" id="slider_area"></div>
